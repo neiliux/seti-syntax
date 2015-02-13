@@ -2,14 +2,14 @@
 
 // EDITOR BACKGROUND & FONT COLORS
 .editor-colors, :host {
-  background-color: @code-background;
+  background-color: #000948; //@code-background;
   color: @code-font-color;
 }
 
 // MAIN CODE EDITOR STYLES
 .editor, :host {
 
-  background-color: @code-background;
+  background-color: #000948; //@code-background;
   color: @code-font-color;
 
   // border-top: solid 6px @selected-line;
@@ -31,11 +31,19 @@
   // GUTTER / LINE NUMBERS
   .gutter {
 
+
+
     background-color: @gutter-background;
     color: @gutter-text;
     // border-right: 10px solid @code-background;
 
     .line-number {
+
+        &.foldable {
+            .icon-right {
+                visibility: visible;
+            }
+        }
 
       // GUTTER BACKGROUND
       background: @gutter-background;
